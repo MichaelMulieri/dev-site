@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Toto&family=Oswald:wght@300&display=swap');
+    
+.nameMain.four{
+    color: rgb(242, 220, 220);
+    letter-spacing: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    text-shadow: .3px .2px .2px #fE0E5D;
+    font-family: 'Oswald', sans-serif;
+}
+
+.four .type{
+    padding: 2rem 1rem;
+    width: auto;
+    margin: auto;
+}
+.four h1 {
+    width: 14ch;
+    border-right: 4px solid rgb(242, 220, 220);
+    margin: 2rem auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(13, end), blink-caret 0.5s step-end 5 alternate;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+.underName.four2{
+    letter-spacing: 1px;
+    height: 1px;
+    color: rgb(240, 212, 212);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-shadow: .1px .1px .1px #6DFF43;
+    font-family: 'Oswald', sans-serif;
+}
+
+.four2 .type{
+    padding: 2rem 1rem;
+    width: auto;
+    margin: auto;
+}
+.four2 h3 {
+    width: 14ch;
+    border-right: 4px solid rgb(240, 212, 212);
+    margin: 2rem auto;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(13, end), blink-caret 0.5s step-end 5 alternate;
+    animation-fill-mode: backwards;
+    animation-delay: 3s;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.myNameIsBtnDiv{
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+  
+button{
+    border-radius: 25px;
+    background-color: #CF4B0A;
+    height: 35px;
+    width: 175px;
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    border-color: black;
+   }
+
+button:hover{
+    box-shadow: 0 5px 15px #FE66F9;
+  }
+
+

@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: url('./images/blur_code.jpg');
+  opacity: .9;
+  background-color: #040404;
+  background-repeat: no-repeat;
+}
+
+.fontColor{
+  color:white;
+  text-decoration: none;
+}
+
+
