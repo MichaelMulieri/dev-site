@@ -23,11 +23,11 @@ const actions = [
     name: "Home",
     to: "/",
   },
-  { icon: <ArticleIcon />, name: "Resume", to: "/" },
-  { icon: <ConstructionIcon />, name: "Projects", to: "/" },
+  { icon: <ArticleIcon />, name: "Resume", to: "/resume" },
+  { icon: <ConstructionIcon />, name: "Projects", to: "/projects" },
   { icon: <GitHubIcon />, name: "GitHub", to: "/" },
   { icon: <LinkedInIcon />, name: "LinkedIn", to: "/" },
-  { icon: <EmailIcon />, name: "Contact", to: "/" },
+  { icon: <EmailIcon />, name: "Contact", to: "/contactpage" },
 ];
 
 function App() {
@@ -60,15 +60,6 @@ function App() {
       >
         Linkedin
       </a>
-      <Link className="fontColor" to="/Resume">
-        Resume
-      </Link>
-      <Link className="fontColor" to="projects">
-        Projects
-      </Link>
-      <Link className="fontColor" to="/contactpage">
-        Contact
-      </Link>
       <Routes>
         <Route
           path="/"

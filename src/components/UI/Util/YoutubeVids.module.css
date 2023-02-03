@@ -1,0 +1,14 @@
+.videoWrapper{
+    background-color: black;
+    height: 100vh;
+}
+
+
+.content{
+    display: grid;
+    height: 725px;
+    overflow-x: hidden;
+    overflow-y: auto;  
+    justify-content: center;
+    row-gap: 25px;
+}
