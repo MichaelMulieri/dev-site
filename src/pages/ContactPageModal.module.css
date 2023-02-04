@@ -5,11 +5,11 @@
 }
 
 .contactWrapper{
-    position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+position: absolute;
+left: 50%;
+top: 50%;
+-webkit-transform: translate(-50%, -50%);
+transform: translate(-50%, -50%);
 }
 
 .content{
@@ -20,7 +20,7 @@ border-radius: 20px;
 
 .content:hover{
     box-shadow: 0 5px 15px #FE66F9;
-  }
+}
 
 .header, .footer{
     padding: 10px;

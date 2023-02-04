@@ -16,6 +16,7 @@
     width: auto;
     margin: auto;
 }
+
 .four h1 {
     width: 14ch;
     border-right: 4px solid rgb(242, 220, 220);
@@ -24,16 +25,19 @@
     overflow: hidden;
     animation: typing 3s steps(13, end), blink-caret 0.5s step-end 5 alternate;
 }
+
 @keyframes typing {
     from {
         width: 0;
     }
 }
+
 @keyframes blink-caret {
     50% {
         border-color: transparent;
     }
 }
+
 .underName.four2{
     letter-spacing: 1px;
     height: 1px;
@@ -51,6 +55,7 @@
     width: auto;
     margin: auto;
 }
+
 .four2 h3 {
     width: 14ch;
     border-right: 4px solid rgb(240, 212, 212);
@@ -61,6 +66,7 @@
     animation-fill-mode: backwards;
     animation-delay: 3s;
 }
+
 @keyframes typing {
     from {
         width: 0;
@@ -77,7 +83,7 @@
     justify-content: center;
     margin-top: 200px;
 }
-  
+
 button{
     border-radius: 25px;
     background-color: #CF4B0A;
@@ -88,10 +94,22 @@ button{
     letter-spacing: 2px;
     font-size: 1rem;
     border-color: black;
-   }
+}
 
 button:hover{
     box-shadow: 0 5px 15px #FE66F9;
-  }
+}
+
+@media screen and (max-width: 900px){
+    .nameMain.four, .underName.four2{
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .nameMain.four, .underName.four2{
+        font-size: 18px;
+    }
+}
 
 

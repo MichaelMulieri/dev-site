@@ -14,6 +14,12 @@ body {
   background-repeat: no-repeat;
 }
 
+@media screen and (max-width: 800px){
+  body{
+  background-image: url('./images/blur_code_smScreen.jpg');
+  }
+}
+
 .fontColor{
   color:white;
   text-decoration: none;

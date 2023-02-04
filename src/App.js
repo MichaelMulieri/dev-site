@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
 import { SpeedDial, SpeedDialAction, SpeedDialIcon } from "@mui/material";
 import { Close } from "@mui/icons-material";
+import { Grid } from "@mui/material";
 import HomePage from "./pages/HomePage";
 import ContactPageModal from "./pages/ContactPageModal";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -13,6 +14,7 @@ import ArticleIcon from "@mui/icons-material/Article";
 import ConstructionIcon from "@mui/icons-material/Construction";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
+import backImg from "./images/blur_code.jpg";
 import "./index.css";
 
 const typingSound = new Audio(sound);
@@ -25,8 +27,28 @@ const actions = [
   },
   { icon: <ArticleIcon />, name: "Resume", to: "/resume" },
   { icon: <ConstructionIcon />, name: "Projects", to: "/projects" },
-  { icon: <GitHubIcon />, name: "GitHub", to: "/" },
-  { icon: <LinkedInIcon />, name: "LinkedIn", to: "/" },
+  {
+    icon: (
+      <GitHubIcon
+        aria-label="Github.com"
+        onClick={() => window.open("https://github.com/MichaelMulieri")}
+      />
+    ),
+    name: "GitHub",
+    to: "/",
+  },
+  {
+    icon: (
+      <LinkedInIcon
+        aria-label="Linkedin.com"
+        onClick={() =>
+          window.open("https://www.linkedin.com/in/michael-mulieri/")
+        }
+      />
+    ),
+    name: "LinkedIn",
+    to: "/",
+  },
   { icon: <EmailIcon />, name: "Contact", to: "/contactpage" },
 ];
 
@@ -44,22 +66,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      <a
-        className="fontColor"
-        target="_blank"
-        href="https://github.com/MichaelMulieri"
-        rel="noreferrer"
-      >
-        Github
-      </a>
-      <a
-        className="fontColor"
-        target="_blank"
-        href="https://www.linkedin.com/in/michael-mulieri/"
-        rel="noreferrer"
-      >
-        Linkedin
-      </a>
       <Routes>
         <Route
           path="/"
@@ -80,7 +86,7 @@ function App() {
           direction="down"
           sx={{
             position: "absolute",
-            top: 125,
+            top: 105,
             right: 230,
           }}
           icon={
