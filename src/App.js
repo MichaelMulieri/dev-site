@@ -7,7 +7,6 @@ import HomePage from "./pages/HomePage";
 import ContactPageModal from "./pages/ContactPageModal";
 import ProjectsPage from "./pages/ProjectsPage";
 import Resume from "./pages/Resume";
-import sound from "./sounds/Typing.mp3";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import HomeIcon from "@mui/icons-material/Home";
 import ArticleIcon from "@mui/icons-material/Article";
@@ -16,8 +15,6 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import backImg from "./images/blur_code.jpg";
 import "./index.css";
-
-const typingSound = new Audio(sound);
 
 const actions = [
   {
@@ -35,7 +32,6 @@ const actions = [
       />
     ),
     name: "GitHub",
-    to: "/",
   },
   {
     icon: (
@@ -47,21 +43,16 @@ const actions = [
       />
     ),
     name: "LinkedIn",
-    to: "/",
   },
   { icon: <EmailIcon />, name: "Contact", to: "/contactpage" },
 ];
 
 function App() {
   const [buttonShown, setButtonShown] = useState(true);
+  const [typeText, setTypeText] = useState(true);
 
   const buttonShownHandler = () => {
-    PlaySound();
     setButtonShown(false);
-  };
-
-  const PlaySound = () => {
-    typingSound.play();
   };
 
   return (
@@ -73,6 +64,8 @@ function App() {
             <HomePage
               handleBtnClick={buttonShownHandler}
               buttonShown={buttonShown}
+              typeText={typeText}
+              setTypeText={setTypeText}
             />
           }
         />
@@ -87,7 +80,7 @@ function App() {
           sx={{
             position: "absolute",
             top: 105,
-            right: 230,
+            right: 125,
           }}
           icon={
             <SpeedDialIcon
@@ -101,7 +94,13 @@ function App() {
           {actions.map((action) => (
             <SpeedDialAction
               key={action.name}
-              icon={<Link to={action.to}>{action.icon}</Link>}
+              icon={
+                action.to ? (
+                  <Link to={action.to}>{action.icon}</Link>
+                ) : (
+                  action.icon
+                )
+              }
               tooltipTitle={action.name}
             />
           ))}
